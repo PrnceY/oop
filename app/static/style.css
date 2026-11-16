@@ -1,0 +1,43 @@
+:root {
+  --bg: #f5f6f8; --card: #fff; --ink: #1d2433; --muted: #6b7385;
+  --brand: #2f6fed; --line: #e3e6ec; --good: #1c8a4f; --bad: #c8372d;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+a { color: var(--brand); }
+.topbar { display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 24px; background: var(--card); border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; text-decoration: none; color: var(--ink); }
+.container { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 20px; margin-bottom: 16px; }
+.card.narrow { max-width: 380px; margin: 48px auto; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+@media (max-width: 760px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.stat .label { display: block; color: var(--muted); font-size: 13px; }
+.stat strong { font-size: 20px; }
+h1, h2, h3 { margin-top: 0; }
+h3 { margin-top: 18px; font-size: 15px; }
+label { display: block; margin-bottom: 12px; font-size: 14px; }
+input, select { width: 100%; padding: 8px 10px; margin-top: 4px; border: 1px solid var(--line);
+  border-radius: 6px; font: inherit; }
+.btn { background: var(--brand); color: #fff; border: 0; padding: 9px 16px; border-radius: 6px;
+  cursor: pointer; font: inherit; }
+.btn.ghost { background: transparent; color: var(--brand); border: 1px solid var(--line); padding: 5px 10px; }
+.inline { display: inline; }
+.row { display: flex; gap: 8px; }
+.row input { margin-top: 0; }
+.muted { color: var(--muted); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.num { text-align: right; }
+.income { color: var(--good); }
+.expense { color: var(--bad); }
+.tips { padding-left: 18px; }
+.flash { padding: 10px 14px; border-radius: 6px; margin-bottom: 12px; }
+.flash.ok { background: #e3f6ec; color: #145c36; }
+.flash.error { background: #fde8e6; color: #8a2119; }
+.month-picker { margin-bottom: 12px; max-width: 220px; }
